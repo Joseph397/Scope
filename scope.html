@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      // Global Scope
+      let fruits = 3;
+
+      console.log(fruits);
+
+      // Global Variables can be used in global scope, function scope and block
+      //Function variables and block scope can be only used in their own scope
+      // IMPORNTANT We can have variables inside a function and also a if statement
+      // We can pass the variables down the if statement
+
+      // function scope
+      function store() {
+        let food = "apple";
+        let fruits = 5;
+
+        if (true) {
+          console.log(food);
+        }
+      }
+      store();
+
+      //block scope
+      if (true) {
+        const food = "pear";
+        let fruits = 5;
+        console.log(food, fruits);
+      }
+    </script>
+  </body>
+</html>
